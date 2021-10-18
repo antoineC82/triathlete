@@ -1,0 +1,323 @@
+* , ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+  /* ------------------------Modal de connexion / inscription --------------------------*/
+
+.log {
+  /* 80% of window height */
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_con {
+  position: relative;
+  height: 80%;
+  border-radius: 16px;
+  width: 55%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn_con .sign-up,
+.sign-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.btn_con .sign-up {
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn_con .sign-up .croix,
+.btn_con .overlay .overlay-right .croix{
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  font-size: 30px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+.btn_con .sign-up .croix {
+  color: #9c9c9c;
+}
+
+.btn_con .sign-in {
+  width: 50%;
+  z-index: 2;
+}
+.btn_con form {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  text-align: center;
+}
+.btn_con h1 {
+  font-weight: bold;
+  margin: 0;
+}
+.btn_con p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+}
+.btn_con input, .btn_con select {
+  background: #eee;
+  padding: 12px 15px;
+  margin: 8px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+
+.btn_con a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.btn_con button {
+  color: #fff;
+  background: #969696;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+.btn_con button:focus,button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn_con button:active {
+  transform: scale(0.9);
+}
+.btn_con #signIn,
+#signUp {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.btn_con.right-panel-active .sign-in {
+  transform: translateX(100%);
+}
+.btn_con.right-panel-active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.btn_con .overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+.btn_con.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+.btn_con .overlay {
+  position: relative;
+  color: #fff;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(to right, #1d1d4e, #11286b, #0e53a7, #21a5be);
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.btn_con.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+.btn_con .overlay-left,
+.overlay-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.btn_con .overlay-left {
+  transform: translateX(-20%);
+}
+.btn_con .overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+.btn_con.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+.btn_con.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+.btn_con .check {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+.btn_con .check p {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+select:invalid { color: gray; }
+
+
+
+/* ------------------------Alerte --------------------------*/
+
+.alert{
+  position: fixed  !important;
+  right: 0;
+}
+
+
+/* ------------------------avatar --------------------------*/
+
+
+
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%);
+}
+
+.next{
+  position: absolute;
+  left: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+.prev{
+  position: absolute;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+input[type="radio"][id^="cb"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 74px;
+  width: 74px;
+  border-radius: 100%;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+
+:checked+label::before {
+  content: "✓";
+  background-color: black;
+  transform: scale(1);
+  z-index:3;
+}
+
+:checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+.box{
+  width: 500px; 
+  justify-content:center;
+  display: none;
+}
+
+.flex{
+  display: flex !important;
+}

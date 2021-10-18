@@ -1,0 +1,121 @@
+.fond {
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  * , ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+  /* ------------------------Modal de connexion / inscription --------------------------*/
+
+.log {
+  /* 80% of window height */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_con {
+  position: relative;
+  height: 70%;
+  border-radius: 16px;
+  width: 26%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn_con
+.sign-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.btn_con .sign-in {
+  width: 100%;
+  z-index: 2;
+}
+.btn_con form {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  text-align: center;
+}
+.btn_con h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 30px;
+}
+.btn_con p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+}
+.btn_con input, .btn_con select {
+  background: #eee;
+  padding: 12px 15px;
+  margin: 8px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+
+.btn_con a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.btn_con button {
+  color: #fff;
+  background: #969696;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+.btn_con button:focus,button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn_con button:active {
+  transform: scale(0.9);
+}
+.btn_con #signIn{
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+
+/* ------------------------Alerte --------------------------*/
+
+.alert{
+  position: fixed  !important;
+  right: 0;
+}
