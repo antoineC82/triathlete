@@ -1,11 +1,7 @@
 <?php
 session_start();
 //connexion BDD
-try {
-  $tria = new PDO("mysql:host=127.0.30.1;dbname=triathlete;charset=utf8", 'root', '');
-} catch (Exception $e) {
-  die('Erreur : ' . $e->getMessage());
-}
+include('../config.php');
 
 //-------------------nombre total triathlon-------------------
 $triathlonstotalesReq = $tria->query('SELECT * FROM triathlon');

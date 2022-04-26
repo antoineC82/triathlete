@@ -1,14 +1,8 @@
 <?php
 
 //connexion BDD
-try
-{
-$tria = new PDO("mysql:host=127.0.30.1;dbname=triathlete;charset=utf8", 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+include('../config.php');
+
 
 
 //si formulaire inscription

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=127.0.30.1;dbname=triathlete', 'root', '');
+include('../config.php');
 if(isset($_SESSION['Num_licence']) AND !empty($_SESSION['Num_licence'])) {
 $msg = $bdd->prepare('SELECT * FROM messages WHERE id_recoi = ? AND date_sms = (SELECT MAX(date_sms)FROM messages) OR lu = 0 ORDER BY id_sms DESC');
 $msg->execute(array($_SESSION['Num_licence']));

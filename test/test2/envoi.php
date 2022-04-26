@@ -1,6 +1,6 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=127.0.30.1;dbname=triathlete', 'root', '');
+include('../config.php');
 if(isset($_SESSION['Num_licence']) AND !empty($_SESSION['Num_licence'])) {
    if(isset($_POST['envoi_message'])) {
       if(isset($_POST['destinataire'],$_POST['message']) AND !empty($_POST['destinataire']) AND !empty($_POST['message'])) {
