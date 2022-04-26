@@ -2,7 +2,7 @@
   <?php
   session_start();
 //connexion BDD
-$tria = new PDO("mysql:host=127.0.30.1;dbname=triathlete;charset=utf8", "root", "");
+include('../config.php');
 //si id existe est n'est pas vide
 if(isset($_GET['DOS']) AND !empty($_GET['DOS'])) {
    $suppr_inscri = htmlspecialchars($_GET['DOS']);

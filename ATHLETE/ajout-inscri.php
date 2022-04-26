@@ -5,7 +5,7 @@
     session_start();
 
     //connexion BDD
-    $tria = new PDO("mysql:host=127.0.30.1;dbname=triathlete;charset=utf8", 'root', '');
+    include('../config.php');
 
     //si id (get) donc url donc voyage
     if (isset($_GET['Num']) and !empty($_GET['Num'])) {
